@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ScholarAI - Study Smarter</title>
+    <meta name="description" content="AI-powered study assistant for students. Create notes, solve doubts, and plan your success." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+      /* Markdown Styles for react-markdown */
+      .markdown-body table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+      .markdown-body th, .markdown-body td {
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem;
+        text-align: left;
+      }
+      .markdown-body th {
+        background-color: #f9fafb;
+        font-weight: 600;
+        color: #374151;
+      }
+      .markdown-body tr:nth-child(even) {
+        background-color: #fcfcfc;
+      }
+      .markdown-body ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .markdown-body ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #1f2937;
+      }
+      .markdown-body h1 { font-size: 1.75rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+      .markdown-body h2 { font-size: 1.4rem; color: #2563eb; }
+      .markdown-body h3 { font-size: 1.2rem; }
+      .markdown-body p { margin-bottom: 1rem; line-height: 1.6; }
+      .markdown-body strong { font-weight: 700; color: #111827; }
+      .markdown-body blockquote { border-left: 4px solid #3b82f6; padding-left: 1rem; margin-left: 0; color: #4b5563; font-style: italic; background-color: #eff6ff; padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; }
+      .markdown-body code { background-color: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.9em; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.1",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <div id="root"></div>
+    <!-- Vite Entry Point -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
